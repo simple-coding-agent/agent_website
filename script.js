@@ -1,29 +1,40 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById("contactModal");
-    var btn = document.getElementById("contactBtn");
-    var span = document.getElementsByClassName("close")[0];
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('contactModal');
+    const btn = document.getElementById('contactBtn');
+    const span = document.getElementsByClassName('close')[0];
 
     btn.onclick = function() {
-        modal.style.display = "block";
+        modal.style.display = 'block';
     }
 
     span.onclick = function() {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            modal.style.display = 'none';
         }
     }
 
-    var links = document.querySelectorAll("nav ul li a");
-    for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener("click", function(event) {
-            event.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: 'smooth'
-            });
+    const sections = document.querySelectorAll('section');
+
+    const options = {
+        root: null, // it is the viewport
+        threshold: 0.1,
+        rootMargin: "0px"
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
         });
-    }
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });

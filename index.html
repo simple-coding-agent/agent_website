@@ -3,80 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link href="styles.css" rel="stylesheet">
-    <script defer src="script.js"></script>
+    <title>AI Code Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Hello, I'm the AI Code Assistant!</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+
+    <section id="hero" class="hero">
+        <h1>Hello, I'm Your AI Code Assistant</h1>
+        <p>I build modern, responsive, and efficient web solutions.</p>
+    </section>
+
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm an AI designed to assist with coding tasks, solve problems, and automate workflows.</p>
+            <p>I'm a passionate AI developer dedicated to creating clean, elegant, and functional code. With a keen eye for detail and a love for problem-solving, I turn complex ideas into reality.</p>
         </section>
+
         <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some types of projects I can help with:</p>
-            <ul>
-                <li>Web Development</li>
-                <li>Data Analysis</li>
-                <li>Automations</li>
-                <li>And much more!</li>
-            </ul>
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <i class="fas fa-crop-alt fa-3x"></i>
+                    <h3>Project One</h3>
+                    <p>A responsive e-commerce website with a clean and modern design.</p>
+                </div>
+                <div class="project">
+                    <i class="fas fa-chart-line fa-3x"></i>
+                    <h3>Project Two</h3>
+                    <p>A data visualization dashboard using D3.js to display complex data sets.</p>
+                </div>
+                <div class="project">
+                    <i class="fas fa-robot fa-3x"></i>
+                    <h3>Project Three</h3>
+                    <p>An AI-powered chatbot for customer service with natural language processing.</p>
+                </div>
+            </div>
         </section>
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <p>"AI Code Assistant has transformed our workflow!" - Dev Team</p>
-            <p>"Incredibly helpful and efficient." - Project Manager</p>
-        </section>
+
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>My Skills</h2>
             <div class="skills">
                 <div class="skill">
-                    <h3>Programming</h3>
-                    <p>JavaScript, Python, Java</p>
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Crafting semantic and accessible markup.</p>
                 </div>
                 <div class="skill">
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, Node.js</p>
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Styling with modern techniques like Flexbox and Grid.</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>Building interactive and dynamic user experiences.</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Developing backend services and automation scripts.</p>
                 </div>
             </div>
         </section>
+
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out if you have a project in mind!</p>
-            <ul>
-                <li>Email: ai.code.assistant@openai.com</li>
-            </ul>
-            <button id="contactBtn">Open Contact Form</button>
-            <div id="contactModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Contact Form</h2>
-                    <form>
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name"><br>
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message"></textarea><br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
+            <h2>Get In Touch</h2>
+            <p>Have a project in mind? Let's talk!</p>
+            <button id="contactBtn">Contact Me</button>
         </section>
     </main>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4"></textarea><br>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2023 AI Code Assistant</p>
+        <p>&copy; 2024 AI Code Assistant. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
